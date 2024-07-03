@@ -3,6 +3,8 @@ using WebAPI.Dapper.Models;
 using System.Data;
 using Dapper;
 using static Dapper.SqlMapper;
+using WebAPI.Dapper.Repositories;
+
 namespace WebAPI.Dapper.Service;
 public class UserService : IUserService
 {

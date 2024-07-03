@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebAPI.Dapper.Models;
-using WebAPI.Dapper.Service;
+using WebAPI.Dapper.Repositories;
+
 namespace WebAPI.Dapper.Controllers;
 
 [Route("api/[controller]")]
@@ -17,7 +15,7 @@ public class UserController : ControllerBase
         _userService = userService;
     }
 
-    [HttpGet]
+    [HttpGet("Buscar por todos os usuarios")]
     public async Task<IActionResult> GetAllUsers()
     {
         try
@@ -31,7 +29,7 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("Buscar usuario por Id especifico{id}")]
     public async Task<IActionResult> GetUserById(int id)
     {
         try
@@ -52,7 +50,7 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpPost]
+    [HttpPost("Adicionar novo usuario")]
     public async Task<IActionResult> CreateUser(User user)
     {
         try
@@ -66,7 +64,7 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpPut]
+    [HttpPut("Atualizar um usuario")]
     public async Task<IActionResult> UpdateUser(User user)
     {
         try
@@ -92,7 +90,7 @@ public class UserController : ControllerBase
         }
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("Deletar um usuario: {id}")]
     public async Task<IActionResult> DeleteUser(int id)
     {
         try

@@ -2,6 +2,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using WebAPI.Dapper.Data;
+using WebAPI.Dapper.Repositories;
 using WebAPI.Dapper.Service;
 
 var builder = WebApplication.CreateBuilder(args);
