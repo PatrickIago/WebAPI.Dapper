@@ -1,4 +1,3 @@
-# WebAPI.Dapper
 # WebAPI CRUD de Usuário com Dapper e .NET 8
 
 Esta é uma WebAPI simples desenvolvida em .NET 8 que realiza operações CRUD (Create, Read, Update, Delete) de usuários utilizando Dapper como Micro-ORM para interação com o banco de dados.
